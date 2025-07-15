@@ -2,6 +2,7 @@ from shiny import reactive, req
 from shiny.express import module, render, ui
 
 import numpy as np
+import patsy
 import seaborn as sns
 import statsmodels.formula.api as smf
 from stargazer.stargazer import Stargazer
@@ -97,12 +98,21 @@ def panel_a(input, output, session):
 
                         est = []
                         if len(input.formula1()) > 0:
-                            est.append(smf.ols(formula=input.formula1(), data=df()).fit())
+                            try:
+                                est.append(smf.ols(formula=input.formula1(), data=df()).fit())
+                            except patsy.PatsyError:
+                                pass
                         
                         if len(input.formula2()) > 0:
-                            est.append(smf.ols(formula=input.formula2(), data=df()).fit())
+                            try:
+                                est.append(smf.ols(formula=input.formula2(), data=df()).fit())
+                            except patsy.PatsyError:
+                                pass
 
-                        Stargazer(est)
+                        try:
+                            Stargazer(est)
+                        except IndexError:
+                            pass
 
 
     @reactive.effect
