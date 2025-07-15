@@ -7,11 +7,11 @@ This is a web application built with [Shiny for Python](https://shiny.posit.co/p
 To install this app as a CLI tool, use one of the following methods:
 
 ```bash
-# From PyPI
-uv tool install wooldridge-shiny
+# From PyPI (Not available)
+#uv tool install wooldridge-shiny
 
-# or using pipx
-pipx install wooldridge-shiny
+# or using pipx (Not available)
+#pipx install wooldridge-shiny
 
 # or directly from GitHub
 uv tool install git+https://github.com/your-username/wooldridge-shiny
@@ -20,10 +20,10 @@ uv tool install git+https://github.com/your-username/wooldridge-shiny
 If you only want to run the app once without installing it permanently, you can do:
 
 ```bash
-uvx wooldridge-shiny
+# uvx wooldridge-shiny (Not available)
 
 # or directly from GitHub
-uvx git+https://github.com/your-username/wooldridge-shiny
+uvx git+https://github.com/kenjisato/wooldridge-shiny
 ```
 
 ## ▶️ Running the app
