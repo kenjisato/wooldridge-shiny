@@ -14,7 +14,7 @@ To install this app as a CLI tool, use one of the following methods:
 #pipx install wooldridge-shiny
 
 # or directly from GitHub
-uv tool install git+https://github.com/your-username/wooldridge-shiny
+uv tool install git+https://github.com/kenjisato/wooldridge-shiny
 ```
 
 If you only want to run the app once without installing it permanently, you can do:
